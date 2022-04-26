@@ -21,18 +21,6 @@
     <ClInclude Include="Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Users\Admin\Downloads\SIMOLATORRRR.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Users\Admin\Downloads\discoverMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Users\Admin\Downloads\baseMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Users\Admin\Downloads\statusMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="base_message.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -57,18 +45,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Users\Admin\Downloads\Simulatorrr.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Users\Admin\Downloads\statusMessage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Users\Admin\Downloads\discoverMessage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Users\Admin\Downloads\baseMessage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="base_message.cpp">

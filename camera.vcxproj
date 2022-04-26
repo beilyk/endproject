@@ -139,10 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Users\Admin\Downloads\baseMessage.h" />
-    <ClInclude Include="..\..\Users\Admin\Downloads\discoverMessage.h" />
-    <ClInclude Include="..\..\Users\Admin\Downloads\SIMOLATORRRR.h" />
-    <ClInclude Include="..\..\Users\Admin\Downloads\statusMessage.h" />
     <ClInclude Include="base_message.h" />
     <ClInclude Include="Buffer.h" />
     <ClInclude Include="Camera.h" />
@@ -152,10 +148,6 @@
     <ClInclude Include="Status_message.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Users\Admin\Downloads\baseMessage.cpp" />
-    <ClCompile Include="..\..\Users\Admin\Downloads\discoverMessage.cpp" />
-    <ClCompile Include="..\..\Users\Admin\Downloads\Simulatorrr.cpp" />
-    <ClCompile Include="..\..\Users\Admin\Downloads\statusMessage.cpp" />
     <ClCompile Include="base_message.cpp" />
     <ClCompile Include="Buffer.cpp" />
     <ClCompile Include="Camera.cpp" />

@@ -25,7 +25,8 @@ void Status_message::print()
 	std::cout << "Type:	" << this->messageType << "\t" << "Status:	" << this->status << "\n";
 }
 
-Status_message::Status_message(int messageId, int messageType, short status) :baseMessage(messageId, messageType)
+Status_message::Status_message(int messageId, int messageType, short status) :base_message(messageId, messageType)
 {
 	this->status = (status < 1 || status>3) ? 0 : status;
 }
+
