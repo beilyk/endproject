@@ -7,7 +7,9 @@ void Simulator::run() {
 	char c;
 	std::cout << "simulator run";
 	for (int i = 0; i < 3; i++) {
+		std::cout << "befor thread";
 		std::thread threadrun(&Camera::run, camera_vec);
+		std::cout << "after thread";
 	}
 	c = getchar();
 	while (c == NULL) {

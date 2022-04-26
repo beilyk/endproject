@@ -5,8 +5,6 @@
 
 
 void main() {
-	std::cout << "jjj";
-	getchar();
 	Simulator s = Simulator::Simulator();
 	s.run();
 	getchar();

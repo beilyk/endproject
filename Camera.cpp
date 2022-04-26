@@ -7,12 +7,15 @@ void Camera::generate(int i) {
 	base_message* mess;
 	//Simulator s;
 	int num = rand() % 2 + 1;
-	if (num == 1)
+	if (num == 1) {
 		mess = createDiscoverMessage();
-	else
+	}
+	else{
 		mess = createStatusMessage();
-	    message = (base_message**)realloc(message, sizeof(base_message*));
-		message[i] = mess;
+	}
+
+	    message = (base_message**)realloc(message, sizeof(base_message*)*5);
+		*(message+i) = mess;
 		//cheek +i
 		
 }
@@ -61,7 +64,7 @@ Camera::Camera() {
 	std::cout << id;
 	isActive = true;
 	bufferCamera= new Buffer();
-	
+	message = (base_message**)malloc( sizeof(base_message*));
 }
 Camera::~Camera() {
 	/*free(bufferCamera);*/
