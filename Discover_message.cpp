@@ -1,8 +1,6 @@
 #include "Discover_message.h"
 #include <cstring>
-#include <stdlib.h>
-#include <iostream>
-
+//#include <stdlib.h>
 void Discover_message::parseMessage()
 {
 	if (!this->messageBuffer)
@@ -15,7 +13,7 @@ void Discover_message::parseMessage()
 
 void Discover_message::parseBack()
 {
-	this->messageBuffer = (unsigned char*)malloc(14);
+	this->messageBuffer = (unsigned char*)malloc(15);
 	std::memcpy(this->messageBuffer, &(this->messageType), 2);
 	std::memcpy(this->messageBuffer + 2, &(this->distance), 4);
 	std::memcpy(this->messageBuffer + 6, &(this->angle), 4);

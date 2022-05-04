@@ -2,7 +2,6 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <iostream>
 
 void Status_message::parseMessage()
 {
@@ -14,7 +13,7 @@ void Status_message::parseMessage()
 
 void Status_message::parseBack()
 {
-	this->messageBuffer = (unsigned char*)malloc(3);
+	this->messageBuffer = (unsigned char*)malloc(4);
 	std::memcpy(this->messageBuffer, &(this->messageType), 2);
 	std::memcpy(this->messageBuffer + 2, &(this->status), 1);
 }

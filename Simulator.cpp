@@ -1,33 +1,42 @@
 #include "Simulator.h"
 #include<thread>
 #include<iostream>
+#include <chrono>
+
 using namespace std::literals::chrono_literals;
 
 void Simulator::run() {
-	char c;
+	
+	std::thread threadarr[6];
 	std::cout << "simulator run";
-	for (int i = 0; i < 3; i++) {
-		std::cout << "befor thread";
-		std::thread threadrun(&Camera::run, camera_vec);
-		std::cout << "after thread";
+	for (int i = 0; i < rc.get_num_camera(); i++) {
+		threadarr[i] = std::thread(&Camera::run, camera_vec[i]);
 	}
-	c = getchar();
-	while (c == NULL) {
-		c = getchar();
-	}
+	   std::cout << "/n     press a char   /n";
+	  
 
-		for (int i = 0; i < 3; i++) {
-			std::thread threadstop(&Camera::stop, camera_vec);
+		   std::this_thread::sleep_for(std::chrono::milliseconds(2000)); // sleep for 1 second
+	   std::cout << "camera_vec" << camera_vec[0].get_bufferCamera().getBuffer();
+	   char x=getchar();
+	  
+	   
+		for (int i = rc.get_num_camera(); i < (rc.get_num_camera())*2; i++) {
+			threadarr[i] = std::thread(&Camera::stop, camera_vec[i]);
+		}
+		for (int i = 0; i < rc.get_num_camera(); i++) {
+			threadarr[i].join();
+
 		}
 	
 }
 
 
 Simulator::Simulator() {
-	//camera_vec = (Camera**)(malloc(sizeof(Camera*)*3));
-	for (int i = 0; i < 3; i++) {
-		camera_vec[i] = Camera::Camera();
-		//camera_vec[i] = new Camera();//Camera::Camera();
+	 rc = read_config();
+	
+	for (int i = 0; i <rc.get_num_camera(); i++) {
+		std::cout <<i<< "camera_vec\n";
+		camera_vec[i] = Camera();
 	}
 	}
 	

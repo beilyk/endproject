@@ -143,6 +143,7 @@
     <ClInclude Include="Buffer.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Discover_message.h" />
+    <ClInclude Include="read_config.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Simulator.h" />
     <ClInclude Include="Status_message.h" />
@@ -153,11 +154,18 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Discover_message.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="read_config.cpp" />
     <ClCompile Include="Simulator.cpp" />
     <ClCompile Include="Status_message.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="camera.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="config.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
